@@ -1,0 +1,65 @@
+[
+    {
+        "id": "P3241",
+        "model": "KX4312",
+        "type": "Passengers",
+        "arrival": "Saraevo",
+        "departure": "Kharkov",
+        "arrival_date": "10.02.2019 15:29",
+        "departure_date": "05.02.2019 13:40"
+    },
+    {
+        "id": "L1234",
+        "model": "XZ132",
+        "type": "Cargo",
+        "arrival": "Saraevo",
+        "departure": "Saint-Petersburg",
+        "arrival_date": "24.01.2019 14:30",
+        "departure_date": "10.01.2019 5:20"
+    },
+    {
+        "id": "P1234",
+        "model": "XZ125",
+        "type": "Passengers",
+        "arrival": "Kharkov",
+        "departure": "Saraevo",
+        "arrival_date": "24.01.2019 13:30",
+        "departure_date": "10.01.2019 1:20"
+    },
+    {
+        "id": "L1482",
+        "model": "CR431",
+        "type": "Cargo",
+        "arrival": "Saint-Petersburg",
+        "departure": "Kharkov",
+        "arrival_date": "24.01.2019 10:30",
+        "departure_date": "4.01.2019 00:20"
+    },
+    {
+        "id": "P3142",
+        "model": "RT182",
+        "type": "Passengers",
+        "arrival": "Kharkov",
+        "departure": "Saint-Petersburg",
+        "arrival_date": "20.01.2019 16:30",
+        "departure_date": "12.01.2019 00:40"
+    },
+    {
+        "id": "P3912",
+        "model": "XV312",
+        "type": "Passengers",
+        "arrival": "Kirov",
+        "departure": "Saint-Petersburg",
+        "arrival_date": "30.12.2018 12:00",
+        "departure_date": "31.12.2018 12:40"
+    },
+    {
+        "id": "P1032",
+        "model": "VY322",
+        "type": "Passengers",
+        "arrival": "Saint-Petersburg",
+        "departure": "Kirov",
+        "arrival_date": "10.01.2019 10:30",
+        "departure_date": "11.01.2019 11:15"
+    }
+]

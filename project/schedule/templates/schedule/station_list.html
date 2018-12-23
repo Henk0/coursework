@@ -1,0 +1,21 @@
+{% extends "schedule/base_main.html" %}
+{% block content %}
+<h4 style="text-align: center; margin-top: 4%; margin-bottom: 1%" >Выберите вокзал</h4>
+
+<table class="table">
+	 
+	<tbody>
+	{% for station in station_list %}   
+	 	<tr>
+	      <td style="text-align: center;">
+	    	<a href="schedule/{{station.name}}" title="Выбрать вокзал">	
+	          {{station.name}}
+	        </a>
+	      </td>
+	 	</tr>
+	{% endfor %}
+	</tbody>
+
+</table>	
+
+{% endblock %}

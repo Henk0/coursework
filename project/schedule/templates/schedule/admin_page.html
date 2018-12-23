@@ -1,0 +1,50 @@
+{% extends "schedule/base_main.html" %}
+{% block content %}
+{% if access == "admin" %}
+<div style ="margin-top: 5%;" class="container">
+   <div style="height: 100%; width: 60%; margin-left:20%">
+	<div class="form-group">
+	 <form action="add_train" method="post">
+	 	{% csrf_token %}
+		<label for="add_train" style="font-size: 250%">Добавить рейс</label>
+		<input type="text" class="form-control" id='add_train' placeholder="ID рейса (A1234)" name='train_id' style='margin-top: 3%'>
+		<input type="text" class="form-control" id='model' placeholder="Модель поезда" name='train_model'>
+		<input type="text" class="form-control" id='type' placeholder="Тип поезда (Cargo/Pas)" name='train_type'>
+		<input type="text" class="form-control" id='arrival' placeholder="Вокзал прибытия" name='train_arrival'>
+		<input type="text" class="form-control" id='departure' placeholder="Вокзал отправления" name='train_departure'>
+		<input type="text" class="form-control" id='arrival_date' placeholder="Дата и время прибытия" name='train_arrival_date'>
+		<input type="text" class="form-control" id='departure_date' placeholder="Дата и время отправления" name='train_departure_date'>
+		<button type="submit" style="margin-top: 10px" class="btn btn-primary">Submit</button>
+	 </form>
+	</div>
+	<div class="form-group" style="margin-top: 5%">
+		<form action="add_station" method="post">
+			{% csrf_token %}
+			<label for="add_station" style="font-size: 250%">Добавить станцию</label>
+			<input type="text" class="form-control" id="add_station" placeholder="Имя станции" name="station_name">
+			<label for="station_info" style="font-size: 100%; margin-top: 10px;">Дополнительная информация о станции</label>
+			<input type="text" class="form-control" id="station_info" placeholder="Доп. Информация" name="station_info">
+			<button type="submit" style="margin-top: 10px" class="btn btn-primary">Submit</button>	
+		</form>
+	</div>
+	<div class="form-group" style="margin-top: 4%">
+	 <form action="edit_train" method="post">
+	 	{% csrf_token %}
+		<label for="edit_train" style="font-size: 250%">Редактировать рейс</label>
+		<br>
+		<label for="edit_train" style="margin-bottom: 2px">ID редактируемого рейса</label>
+		<input type="text" class="form-control" id='edit_train' placeholder="ID рейса (A1234)" name='train_id' style='margin-top: 1px'>
+		<label for='model' style="margin-top: 10px">Новая информация о рейсе</label>
+		<input type="text" class="form-control" id='model' placeholder="Модель поезда" name='train_model'>
+		<input type="text" class="form-control" id='type' placeholder="Тип поезда (Cargo/Pas)" name='train_type'>
+		<input type="text" class="form-control" id='arrival' placeholder="Вокзал прибытия" name='train_arrival'>
+		<input type="text" class="form-control" id='departure' placeholder="Вокзал отправления" name='train_departure'>
+		<input type="text" class="form-control" id='arrival_date' placeholder="Дата и время прибытия" name='train_arrival_date'>
+		<input type="text" class="form-control" id='departure_date' placeholder="Дата и время отправления" name='train_departure_date'>
+		<button type="submit" style="margin-top: 10px" class="btn btn-primary">Submit</button>
+	 </form>
+	</div>
+   </div>
+</div>
+{% endif %}
+{% endblock %}

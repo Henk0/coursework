@@ -1,0 +1,12 @@
+{% extends "schedule/base_main.html" %}
+{% block content %}
+{% for option in info %}
+<div style ="margin-top: 5%;" class="container">
+<h2>From <b><b>{{option.departure}}</b></b> to <b><b>{{option.arrival}}</b></b></h2>
+<h3>Departure: <b><b>{{option.departure_date}}</b></b></h3> 
+<h3>Arrival: <b><b>{{option.arrival_date}}</b></b></h3>
+<h4>Train type: <b><b>{{option.type}}</b></b></h4>
+<h4>Model: <b><b>{{option.model}}</b></b></h4>
+</div>
+{% endfor %}
+{% endblock %}
