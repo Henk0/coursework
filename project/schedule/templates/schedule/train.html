@@ -2,11 +2,12 @@
 {% block content %}
 {% for option in info %}
 <div style ="margin-top: 5%;" class="container">
-<h2>From <b><b>{{option.departure}}</b></b> to <b><b>{{option.arrival}}</b></b></h2>
-<h3>Departure: <b><b>{{option.departure_date}}</b></b></h3> 
-<h3>Arrival: <b><b>{{option.arrival_date}}</b></b></h3>
-<h4>Train type: <b><b>{{option.type}}</b></b></h4>
-<h4>Model: <b><b>{{option.model}}</b></b></h4>
+<p style="font-size: 220%"><b><b style="color: orange;">{{option.name}} ({{option.id}}) <br> {{option.type}}</b></b></p>
+<p style="font-size: 200%">From <b>{{option.departure}}</b> to <b>{{option.arrival}}</b></p>
+<p style="font-size: 150%">Departure at <b> {{option.departure_date}}</b></p> 
+<p style="font-size: 150%">Arrival at <b> {{option.arrival_date}}</b></p>
+<p style="font-size: 120%">Model: <b>{{option.model}}</b></p>
+<p style="font-size: 120%">Service class: <b>{{option.service}}</b></p>
 </div>
 {% endfor %}
-{% endblock %}
+{% endblock %}s

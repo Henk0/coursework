@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import json
 
 def station_list(request):
@@ -47,20 +47,22 @@ def add_train(request):
 	if request.POST:
 		t_id = request.POST.get("train_id")
 		model = request.POST.get("train_model")
-		t_type = request.POST.get("train_type")
+		name = request.POST.get("train_type")
 		arrival = request.POST.get("train_arrival")
 		departure = request.POST.get("train_departure")
 		arrival_date = request.POST.get("train_arrival_date")
 		departure_date = request.POST.get("train_departure_date")
+		service = request.POST.get("service")
 
 		data = {
         	"id" : t_id,
         	"model": model,
-        	"type": t_type,
+        	"name": name,
         	"arrival": arrival,
         	"departure": departure,
         	"arrival_date": arrival_date,
-        	"departure_date": departure_date
+        	"departure_date": departure_date,
+        	"service": service
         }
 
 		with open('schedule/train_list.json', 'r', encoding='utf-8') as f:
@@ -78,10 +80,12 @@ def add_station(request):
 	if request.POST:
 		name = request.POST.get('station_name')
 		info = request.POST.get('station_info')
+		st_id = request.POST.get('station_id')
 
 		station = {
 			"name": name,
-			"info": info
+			"info": info,
+			"id": st_id
 		}
 
 		with open('schedule/station_list.json', 'r', encoding='utf-8') as f:
@@ -98,11 +102,12 @@ def edit_train(request):
 	if request.POST:
 		t_id = request.POST.get("train_id")
 		model = request.POST.get("train_model")
-		t_type = request.POST.get("train_type")
+		name = request.POST.get("name")
 		arrival = request.POST.get("train_arrival")
 		departure = request.POST.get("train_departure")
 		arrival_date = request.POST.get("train_arrival_date")
 		departure_date = request.POST.get("train_departure_date")
+		service = request.POST.get("service")
 
 		with open('schedule/train_list.json', 'r', encoding='utf-8') as f:
 			info = json.load(f)
@@ -111,14 +116,22 @@ def edit_train(request):
 		for train in info:
 			if train['id'] == t_id:
 				train['model'] = model
-				train['type'] = t_type
+				train['name'] = name
 				train['arrival'] = arrival
 				train['departure'] = departure
 				train['arrival_date'] = arrival_date
 				train['departure_date'] = departure_date
+				train['service'] = service
 
 		with open('schedule/train_list.json', 'w', encoding='utf-8') as f:
 			f.write(json.dumps(info, indent=4))
 			f.close()
 		return render(request, 'schedule/admin_page.html', {'access': 'admin'})
 	return render(request, 'schedule/login.html')
+
+def search(request):
+	if request.POST:
+		t_id = request.POST.get('train_id')
+		return redirect('train/{}'.format(t_id))
+	else:
+		return render(request, 'schedule/search.html')

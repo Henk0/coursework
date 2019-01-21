@@ -1,18 +1,22 @@
 [
     {
         "name": "Saraevo",
+        "id": "SRV",
         "info": "Nato army"
     },
     {
         "name": "Saint-Petersburg",
+        "id": "SPB",
         "info": "Cultural capital of Russia"
     },
     {
         "name": "Kharkov",
+        "id": "KHR",
         "info": "Esport Ready"
     },
     {
         "name": "Kirov",
-        "info": ""
+        "id": "KIR",
+        "info": "Nothing"
     }
 ]

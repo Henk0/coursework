@@ -9,5 +9,6 @@ urlpatterns = [
     path('auth', auth, name='auth'),
     path('add_train', add_train, name='add_train'),
     path('add_station', add_station, name='add_station'),
-    path('edit_train', edit_train, name='edit_train')
+    path('edit_train', edit_train, name='edit_train'),
+    path('search', search, name='search')
 ]

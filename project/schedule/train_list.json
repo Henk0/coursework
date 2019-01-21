@@ -1,65 +1,79 @@
 [
     {
         "id": "P3241",
-        "model": "KX4312",
-        "type": "Passengers",
+        "model": "KX432",
+        "name": "Striz",
         "arrival": "Saraevo",
         "departure": "Kharkov",
-        "arrival_date": "10.02.2019 15:29",
-        "departure_date": "05.02.2019 13:40"
+        "arrival_date": "25.01.2019 15:29",
+        "departure_date": "19.01.2019 8:32",
+        "service": "Standart",
+        "type": "High-Speed train"
     },
     {
         "id": "L1234",
         "model": "XZ132",
-        "type": "Cargo",
+        "name": "Hawk",
         "arrival": "Saraevo",
         "departure": "Saint-Petersburg",
-        "arrival_date": "24.01.2019 14:30",
-        "departure_date": "10.01.2019 5:20"
+        "arrival_date": "27.01.2019 14:30",
+        "departure_date": "20.01.2019 10:27",
+        "service": "Business",
+        "type": "Big Boy"
     },
     {
         "id": "P1234",
         "model": "XZ125",
-        "type": "Passengers",
+        "name": "Seabird",
         "arrival": "Kharkov",
         "departure": "Saraevo",
-        "arrival_date": "24.01.2019 13:30",
-        "departure_date": "10.01.2019 1:20"
+        "arrival_date": "29.01.2019 13:30",
+        "departure_date": "21.01.2019 1:20",
+        "service": "Standart",
+        "type": "Electric"
     },
     {
         "id": "L1482",
         "model": "CR431",
-        "type": "Cargo",
+        "name": "Cargo",
         "arrival": "Saint-Petersburg",
         "departure": "Kharkov",
-        "arrival_date": "24.01.2019 10:30",
-        "departure_date": "4.01.2019 00:20"
+        "arrival_date": "31.01.2019 10:30",
+        "departure_date": "22.01.2019 00:20",
+        "service": "Economy",
+        "type": "Slow-Speed"
     },
     {
         "id": "P3142",
         "model": "RT182",
-        "type": "Passengers",
+        "name": "Vyatka",
         "arrival": "Kharkov",
         "departure": "Saint-Petersburg",
-        "arrival_date": "20.01.2019 16:30",
-        "departure_date": "12.01.2019 00:40"
+        "arrival_date": "02.02.2019 16:30",
+        "departure_date": "23.01.2019 00:40",
+        "service": "Standart",
+        "type": "High-Speed"
     },
     {
         "id": "P3912",
         "model": "XV312",
-        "type": "Passengers",
+        "name": "Vyatka",
         "arrival": "Kirov",
         "departure": "Saint-Petersburg",
-        "arrival_date": "30.12.2018 12:00",
-        "departure_date": "31.12.2018 12:40"
+        "arrival_date": "03.02.2019 10:30",
+        "departure_date": "24.01.2019 10:30",
+        "service": "Business",
+        "type": "Businessmans"
     },
     {
         "id": "P1032",
         "model": "VY322",
-        "type": "Passengers",
+        "name": "Kama",
         "arrival": "Saint-Petersburg",
         "departure": "Kirov",
-        "arrival_date": "10.01.2019 10:30",
-        "departure_date": "11.01.2019 11:15"
+        "arrival_date": "06.02.2019 10:30",
+        "departure_date": "25.01.2019 11:15",
+        "service": "Economy",
+        "type": "Low Life"
     }
 ]

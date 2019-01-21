@@ -7,7 +7,7 @@
 			<tr>
 				<th scope="col">Destination</th>
 				<th scope="col">Departure datetime</th>
-				<th scope="col">Type</th>
+				<th scope="col">Name(ID)</th>
 				<th scope="col">Model</th>
 				<th scope="col">More</th>
 			</tr>
@@ -15,9 +15,9 @@
 		<tbody>
 			{% for train in departure %}
 			<tr>
-				<td style="width: 25%">{{train.arrival}}</td>
-				<td style="width: 22%">{{train.departure_date}}</td>
-				<td style="width: 20%">{{train.type}}</td>
+				<td style="width: 22%">{{train.arrival}}</td>
+				<td style="width: 21%">{{train.departure_date}}</td>
+				<td style="width: 23%">{{train.name}}({{train.id}})</td>
 				<td style="width: 15%">{{train.model}}</td>
 				<td style="width: 15%">
 					<a href="/train/{{train.id}}">Learn more</a>
@@ -33,7 +33,7 @@
 			<tr>
 				<th scope="col">From</th>
 				<th scope="col">Arrival datetime</th>
-				<th scope="col">Type</th>
+				<th scope="col">Name(ID)</th>
 				<th scope="col">Model</th>
 				<th scope="col">More</th>
 			</tr>
@@ -41,9 +41,9 @@
 		<tbody>	
 			{% for train in arrival %}
 			<tr>	
-				<td style="width: 25%">{{train.departure}}</td>
-				<td style="width: 22%">{{train.arrival_date}}</td>
-				<td style="width: 20%">{{train.type}}</td>
+				<td style="width: 22%">{{train.departure}}</td>
+				<td style="width: 21%">{{train.arrival_date}}</td>
+				<td style="width: 23%">{{train.name}}({{train.id}})</td>
 				<td style="width: 15%">{{train.model}}</td>
 				<td style="width: 15%">
 					<a href="/train/{{train.id}}">Learn more</a>

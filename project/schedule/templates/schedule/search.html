@@ -1,0 +1,15 @@
+{% extends "schedule/base_main.html" %}
+{% block content %}
+<div style ="margin-top: 15%;" class="container">
+<div style="height: 100%; width: 50%; margin-left:24%">
+<form action="search" method="post"> 
+  {% csrf_token %}
+  <div class="form-group">
+      <label for="InputLogin"><b>Route</b></label>
+    <input type="text" class="form-control" id="train_id" name="train_id" placeholder="Train Number(id)">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+    </div>
+</div>
+{% endblock %}
